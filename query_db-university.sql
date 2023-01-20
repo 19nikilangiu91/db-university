@@ -1,6 +1,7 @@
 -- Query
 
 -- 1. Selezionare tutti gli studenti nati nel 1990 (160)
+
 SELECT *
 FROM `students`
 WHERE `date_of_birth`
@@ -16,7 +17,7 @@ WHERE `cfu`> 10;
 
 SELECT * 
 FROM `students`
-WHERE TIMESTAMPDIFF(year,date_of_birth,curdate()) > 30;
+WHERE TIMESTAMPDIFF(year,date_of_birth,CURDATE()) > 30;
 
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
@@ -49,4 +50,4 @@ FROM `departments`;
 
 SELECT * 
 FROM `teachers`
-WHERE `phone` IS NOT NULL;
+WHERE `phone` IS NULL;
